@@ -241,26 +241,29 @@
             padding-left: 80px;
         }
 
-        .video-container {
-            background: #000;
-            border-radius: 10px;
-            overflow: hidden;
-            margin-top: 20px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-        }
+        /* Removido o video-container e o CSS relacionado */
 
-        .video-container iframe {
-            width: 100%;
-            height: 450px;
-            border: none;
-            display: block;
+        .video-link-container {
+            padding-left: 80px;
         }
         
-        .video-container video {
-             width: 100%;
-             height: 450px;
-             border: none;
-             display: block;
+        .video-link-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #00a8cc 0%, #52b788 100%);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.05em;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 168, 204, 0.3);
+        }
+
+        .video-link-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 168, 204, 0.4);
         }
 
         .video-placeholder {
@@ -365,10 +368,12 @@
             .video-description {
                 padding-left: 0;
             }
-
-            .video-container iframe, .video-container video {
-                height: 250px;
+            
+            .video-link-container {
+                padding-left: 0;
             }
+
+            /* Removida a regra de altura para o vídeo/iframe */
 
             .video-title h2 {
                 font-size: 1.3em;
@@ -418,11 +423,11 @@
                         Aprenda passo a passo como fazer login no sistema de votação do Morador Online, navegar pela interface e localizar as enquetes disponíveis para votação.
                     </div>
                     
-                    <div class="video-container">
-                        <video controls controlsList="nodownload" style="width: 100%; height: 450px;">
-                            <source src="acesso-votacao.mp4" type="video/mp4">
-                            Seu navegador não suporta a reprodução de vídeos.
-                        </video>
+                    <!-- Bloco de vídeo substituído por um link/botão -->
+                    <div class="video-link-container">
+                        <a href="acesso-votacao.mp4" target="_blank" class="video-link-button" rel="noopener noreferrer">
+                            ▶️ Abrir vídeo em nova aba
+                        </a>
                     </div>
                 </div>
 
