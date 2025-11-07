@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQA - Links Úteis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            position: relative;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: #00a8cc;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            width: 100%;
+            max-width: 600px;
+            background: white;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            overflow: hidden;
+            transform: perspective(1000px) rotateY(-2deg);
+            transition: all 0.3s ease;
+        }
+
+        .header-content:hover {
+            transform: perspective(1000px) rotateY(0deg) scale(1.02);
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
+        }
+
+        .header-top {
+            background: #00a8cc;
+            padding: 20px;
+            border-bottom: 3px solid white;
+        }
+
+        .header-title {
+            color: white;
+            font-size: 1.6em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-logo {
+            background: #52b788;
+            padding: 60px 40px;
+            border-top: 3px solid white;
+            border-bottom: 3px solid white;
+        }
+
+        .header-sqa {
+            font-size: 7em;
+            font-weight: 900;
+            color: white;
+            margin: 0;
+            line-height: 1;
+            letter-spacing: 10px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-bottom {
+            background: #e0e0e0;
+            height: 80px;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .intro-text {
+            background: linear-gradient(135deg, #00a8cc15 0%, #52b78815 100%);
+            border-left: 4px solid #00a8cc;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .intro-text strong {
+            color: #00a8cc;
+            font-size: 1.1em;
+        }
+
+        .links-section {
+            margin-top: 30px;
+        }
+
+        .links-section h2 {
+            color: #00a8cc;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            border-bottom: 3px solid #52b788;
+            padding-bottom: 10px;
+        }
+
+        .link-item {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .link-item:hover {
+            transform: translateX(10px);
+            border-color: #00a8cc;
+            box-shadow: 0 5px 15px rgba(0, 168, 204, 0.2);
+        }
+
+        .link-item::before {
+            content: "→";
+            font-size: 24px;
+            font-weight: bold;
+            color: #52b788;
+            margin-right: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .link-item:hover::before {
+            color: #00a8cc;
+            transform: translateX(5px);
+        }
+
+        .link-text {
+            color: #333;
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+            }
+
+            .header {
+                height: 350px;
+            }
+
+            .header-content {
+                max-width: 90%;
+            }
+
+            .header-title {
+                font-size: 1.1em;
+                letter-spacing: 1.5px;
+            }
+
+            .header-top {
+                padding: 15px;
+            }
+
+            .header-logo {
+                padding: 40px 20px;
+            }
+
+            .header-sqa {
+                font-size: 4.5em;
+                letter-spacing: 5px;
+            }
+
+            .header-bottom {
+                height: 60px;
+            }
+
+            .links-section h2 {
+                font-size: 1.4em;
+            }
+
+            .link-item {
+                padding: 15px;
+            }
+
+            .link-text {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-content">
+                <div class="header-top">
+                    <h1 class="header-title">Superquadra Atlântica</h1>
+                </div>
+                <div class="header-logo">
+                    <div class="header-sqa">SQA</div>
+                </div>
+                <div class="header-bottom"></div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="intro-text">
+                <strong>Bem-vindo(a) ao Portal de Informações do SQA!</strong><br><br>
+                Este arquivo consolida as últimas informações da Superquadra Atlântica e tem o intuito de ajudar você, morador, a entender o que está acontecendo e participar ativamente de todas as decisões e eventos importantes da nossa comunidade. Aqui você encontrará acesso rápido aos principais recursos e informações necessárias para se manter informado e engajado.
+            </div>
+
+            <div class="links-section">
+                <h2>🔗 Links Úteis</h2>
+
+                <a href="reforma_regimento.html" style="text-decoration: none; color: inherit;">
+                    <div class="link-item">
+                        <span class="link-text">📋 Reforma do Regimento Interno e Convenção<br>
+                        <small style="color: #666; font-size: 0.9em; font-weight: normal; margin-left: 30px; display: block; margin-top: 5px;">
+                        Texto das enquetes, explicação detalhada, prazos e link direto para o site de votação
+                        </small>
+                        </span>
+                    </div>
+                </a>
+
+                <a href="videos_tutoriais.html" style="text-decoration: none; color: inherit;">
+                    <div class="link-item">
+                        <span class="link-text">🎥 Vídeos Tutoriais do Sistema de Votação<br>
+                        <small style="color: #666; font-size: 0.9em; font-weight: normal; margin-left: 30px; display: block; margin-top: 5px;">
+                        1) Como acessar o sistema de votação | 2) Como resetar a senha (em breve)
+                        </small>
+                        </span>
+                    </div>
+                </a>
+
+                <div class="link-item">
+                    <span class="link-text">💬 Grupo WhatsApp - Esclarecimento das Enquetes<br>
+                    <small style="color: #666; font-size: 0.9em; font-weight: normal; margin-left: 30px; display: block; margin-top: 5px;">
+                    Espaço exclusivo para explicar o conteúdo das enquetes de reforma do Regimento Interno e Convenção, sem debates sobre aprovação ou rejeição
+                    </small>
+                    </span>
+                </div>
+
+                <div class="link-item">
+                    <span class="link-text">📄 Relatório da Comissão de Água Quente<br>
+                    <small style="color: #666; font-size: 0.9em; font-weight: normal; margin-left: 30px; display: block; margin-top: 5px;">
+                    Acesse o relatório completo da comissão
+                    </small>
+                    </span>
+                </div>
+
+                <div class="link-item">
+                    <span class="link-text">📅 Reunião 11/11/2025 - Comissão de Água Quente<br>
+                    <small style="color: #666; font-size: 0.9em; font-weight: normal; margin-left: 30px; display: block; margin-top: 5px;">
+                    Convite e informações sobre a reunião de apresentação do relatório
+                    </small>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Superquadra Atlântica - SQA | Atualizado em Novembro de 2025</p>
+            <p>Mantenha-se informado e participe da nossa comunidade!</p>
+        </div>
+    </div>
+</body>
+</html>
