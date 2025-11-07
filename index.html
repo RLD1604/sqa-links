@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Convite Reunião - Comissão de Água Quente - SQA</title>
+    <title>SQA - Links Úteis</title>
     <style>
         * {
             margin: 0;
@@ -15,12 +15,15 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             padding: 20px;
         }
 
         .container {
-            max-width: 1000px;
-            margin: 0 auto;
+            max-width: 800px;
+            width: 100%;
             background: white;
             border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
@@ -34,6 +37,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            overflow: hidden;
             background: #00a8cc;
         }
 
@@ -95,138 +99,88 @@
         }
 
         .content {
-            padding: 50px;
+            padding: 40px;
         }
 
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: #00a8cc;
-            text-decoration: none;
-            font-size: 1.1em;
+        .intro-text {
+            background: linear-gradient(135deg, #00a8cc15 0%, #52b78815 100%);
+            border-left: 4px solid #00a8cc;
+            padding: 20px;
             margin-bottom: 30px;
+            border-radius: 8px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .intro-text strong {
+            color: #00a8cc;
+            font-size: 1.1em;
+        }
+
+        .links-section {
+            margin-top: 30px;
+        }
+
+        .links-section h2 {
+            color: #00a8cc;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            border-bottom: 3px solid #52b788;
+            padding-bottom: 10px;
+        }
+
+        .link-item {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
             transition: all 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .link-item:hover {
+            transform: translateX(10px);
+            border-color: #00a8cc;
+            box-shadow: 0 5px 15px rgba(0, 168, 204, 0.2);
+        }
+
+        .link-item::before {
+            content: "→";
+            font-size: 24px;
+            font-weight: bold;
+            color: #52b788;
+            margin-right: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .link-item:hover::before {
+            color: #00a8cc;
+            transform: translateX(5px);
+        }
+
+        .link-text {
+            color: #333;
+            font-size: 1.1em;
             font-weight: 500;
         }
 
-        .back-link:hover {
-            color: #52b788;
-            transform: translateX(-5px);
-        }
 
-        .page-title {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .page-title h1 {
-            color: #00a8cc;
-            font-size: 2.2em;
-            margin-bottom: 10px;
-        }
-
-        .page-title p {
-            color: #666;
-            font-size: 1.1em;
-            line-height: 1.6;
-        }
-
-        .convite-box {
-            background: linear-gradient(135deg, #00a8cc15 0%, #52b78815 100%);
-            border-left: 5px solid #00a8cc;
-            padding: 35px;
-            margin-bottom: 40px;
-            border-radius: 10px;
-            color: #333;
-            line-height: 1.8;
-            font-size: 1.05em;
-        }
-
-        .convite-box p {
-            margin-bottom: 20px;
-        }
-
-        .info-destaque {
-            background: #fff;
-            border: 2px solid #00a8cc;
-            border-radius: 10px;
-            padding: 25px;
-            margin: 25px 0;
-            box-shadow: 0 5px 15px rgba(0, 168, 204, 0.1);
-        }
-
-        .info-destaque p {
-            margin: 10px 0;
-            font-size: 1.1em;
-        }
-
-        .info-destaque strong {
-            color: #00a8cc;
-            display: inline-block;
-            min-width: 100px;
-        }
-
-        .info-destaque a {
-            color: #52b788;
-            font-weight: bold;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .info-destaque a:hover {
-            color: #00a8cc;
-            text-decoration: underline;
-        }
-
-        .cta-button {
-            background: linear-gradient(135deg, #00a8cc 0%, #52b788 100%);
-            color: white;
-            border: none;
-            padding: 15px 35px;
-            border-radius: 25px;
-            font-size: 1.1em;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 168, 204, 0.3);
-            margin-top: 15px;
-            display: inline-block;
-            text-decoration: none;
-            text-align: center;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 168, 204, 0.4);
-        }
-        
-        .assinaturas {
-            margin-top: 30px;
-            line-height: 1.6;
-            font-size: 0.95em;
-            color: #555;
-        }
-
-        .assinaturas p {
-            margin: 5px 0;
-        }
 
         .footer {
             background: #f8f9fa;
-            padding: 30px;
+            padding: 20px;
             text-align: center;
-            border-top: 1px solid #e0e0e0;
-        }
-
-        .footer p {
             color: #666;
-            margin: 5px 0;
+            font-size: 0.9em;
+            border-top: 1px solid #e0e0e0;
         }
 
         @media (max-width: 768px) {
             .content {
-                padding: 25px;
+                padding: 20px;
             }
 
             .header {
@@ -237,16 +191,37 @@
                 max-width: 90%;
             }
 
+            .header-title {
+                font-size: 1.1em;
+                letter-spacing: 1.5px;
+            }
+
+            .header-top {
+                padding: 15px;
+            }
+
+            .header-logo {
+                padding: 40px 20px;
+            }
+
             .header-sqa {
                 font-size: 4.5em;
                 letter-spacing: 5px;
             }
 
-            .page-title h1 {
-                font-size: 1.6em;
+            .header-bottom {
+                height: 60px;
             }
 
-            .info-destaque p {
+            .links-section h2 {
+                font-size: 1.4em;
+            }
+
+            .link-item {
+                padding: 15px;
+            }
+
+            .link-text {
                 font-size: 1em;
             }
         }
@@ -265,51 +240,76 @@
                 <div class="header-bottom"></div>
             </div>
         </div>
-
+        
         <div class="content">
-            <a href="index.html" class="back-link">← Voltar para Links Úteis</a>
-
-            <div class="page-title">
-                <h1>📅 Convite: Reunião da Comissão de Água Quente</h1>
-                <p>Apresentação de conclusões e estimativas de custo</p>
+            <div class="intro-text">
+                <strong>Bem-vindo(a) ao Portal de Informações do SQA!</strong><br><br>
+                Este arquivo consolida as últimas informações da Superquadra Atlântica e tem o intuito de ajudar você, morador, a entender o que está acontecendo e participar ativamente de todas as decisões e eventos importantes da nossa comunidade. Aqui você encontrará acesso rápido aos principais recursos e informações necessárias para se manter informado e engajado.
             </div>
 
-            <div class="convite-box">
-                <p><strong>Prezados(as) Vizinhos(as),</strong></p>
+            <div class="links-section">
+                <h2>🔗 Links Úteis</h2>
 
-                <p>Convidamos todos para uma reunião online onde serão apresentadas as conclusões do relatório da Comissão do Sistema de Água Quente e as estimativas de custo para recomposição do sistema.</p>
+                <!-- Link 1: Reforma do Regimento -->
+                <a href="reforma_regimento.html" style="text-decoration: none; color: inherit;">
+                    <div class="link-item">
+                        <span class="link-text">📋 Reforma do Regimento Interno e Convenção<br>
+                        <small style="color: #666; font-size: 0.9em; font-weight: normal; margin-left: 30px; display: block; margin-top: 5px;">
+                        Texto das enquetes, explicação detalhada, prazos e link direto para o site de votação
+                        </small>
+                        </span>
+                    </div>
+                </a>
 
-                <div class="info-destaque">
-                    <p><strong>📅 Data:</strong> terça-feira, 11 de novembro</p>
-                    <p><strong>🕗 Horário:</strong> 20h00</p>
-                    <p><strong>💻 Plataforma:</strong> Google Meet</p>
-                    <p><strong>🔗 Link de acesso:</strong> <a href="https://meet.google.com/aka-ytzj-zua" target="_blank">https://meet.google.com/aka-ytzj-zua</a></p>
-                </div>
-                
-                <div style="text-align: center; margin: 30px 0;">
-                    <a href="https://meet.google.com/aka-ytzj-zua" target="_blank" class="cta-button">
-                        Acessar Reunião (Google Meet) →
-                    </a>
-                </div>
+                <!-- Link 2: Vídeos Tutoriais -->
+                <a href="videos_tutoriais.html" style="text-decoration: none; color: inherit;">
+                    <div class="link-item">
+                        <span class="link-text">🎥 Vídeos Tutoriais do Sistema de Votação<br>
+                        <small style="color: #666; font-size: 0.9em; font-weight: normal; margin-left: 30px; display: block; margin-top: 5px;">
+                        1) Como acessar o sistema de votação | 2) Como resetar a senha (em breve)
+                        </small>
+                        </span>
+                    </div>
+                </a>
 
-                <p>Sua presença é muito importante para entendermos juntos as alternativas e próximos passos sobre um tema essencial para o conforto de todos os moradores.</p>
+                <!-- Link 3: Grupo WhatsApp (Atualizado) -->
+                <a href="https://chat.whatsapp.com/IqjQbwVW0ffK8P1nZB4BHh" target="_blank" style="text-decoration: none; color: inherit;">
+                    <div class="link-item">
+                        <span class="link-text">💬 Grupo WhatsApp - Esclarecimento das Enquetes<br>
+                        <small style="color: #666; font-size: 0.9em; font-weight: normal; margin-left: 30px; display: block; margin-top: 5px;">
+                        Espaço exclusivo para explicar o conteúdo das enquetes de reforma do Regimento Interno e Convenção, sem debates sobre aprovação ou rejeição
+                        </small>
+                        </span>
+                    </div>
+                </a>
 
-                <p>Contamos com sua participação!</p>
+                <!-- Link 4: Relatório Água Quente (Atualizado) -->
+                <a href="https://drive.google.com/file/d/16sKLSe0Sa-upTdYkTF4bpndiYfsTwuox/view?usp=sharing" target="_blank" style="text-decoration: none; color: inherit;">
+                    <div class="link-item">
+                        <span class="link-text">📄 Relatório da Comissão de Água Quente<br>
+                        <small style="color: #666; font-size: 0.9em; font-weight: normal; margin-left: 30px; display: block; margin-top: 5px;">
+                        Acesse o relatório completo da comissão
+                        </small>
+                        </span>
+                    </div>
+                </a>
 
-                <div class="assinaturas">
-                    <p>Atenciosamente,</p>
-                    <p>ANGELO GEOVANI ARAUJO (A1102)</p>
-                    <p>MARCELO PRATES GRANJEIRO (F801)</p>
-                    <p>RODRIGO LINHARES DRUMMOND (E702)</p>
-                    <p>JULIO CESAR DEL FIACO (E901)</p>
-                    <p>AHMED IZZAT (H1102)</p>
-                </div>
+                <!-- Link 5: Reunião Água Quente (Revertido para underscore) -->
+                <a href="reuniao_agua_quente.html" style="text-decoration: none; color: inherit;">
+                    <div class="link-item">
+                        <span class="link-text">📅 Reunião 11/11/2025 - Comissão de Água Quente<br>
+                        <small style="color: #666; font-size: 0.9em; font-weight: normal; margin-left: 30px; display: block; margin-top: 5px;">
+                        Convite e informações sobre a reunião de apresentação do relatório
+                        </small>
+                        </span>
+                    </div>
+                </a>
             </div>
         </div>
 
         <div class="footer">
-            <p><strong>Superquadra Atlântica - SQA</strong></p>
-            <p>Comissão do Sistema de Água Quente | 2025</p>
+            <p>Superquadra Atlântica - SQA | Atualizado em Novembro de 2025</p>
+            <p>Mantenha-se informado e participe da nossa comunidade!</p>
         </div>
     </div>
 </body>
