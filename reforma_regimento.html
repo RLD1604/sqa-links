@@ -251,6 +251,7 @@
             box-shadow: 0 4px 15px rgba(0, 168, 204, 0.3);
             margin-top: 15px;
             display: inline-block;
+            text-decoration: none; /* Adicionado para garantir que o div não tenha sublinhado se aninhado */
         }
 
         .cta-button:hover {
@@ -512,35 +513,41 @@
 
             <div class="options-list">
                 <!-- Opção 1 -->
-                <div class="option-card">
-                    <div class="option-number">1</div>
-                    <div class="option-title">
-                        <span class="option-icon">📄</span>
-                        Texto das Enquetes
+                <a href="https://drive.google.com/file/d/12YLrKTTUbAEE3SXYVjAJKeherA2y_YE7/view?usp=sharing" target="_blank" style="text-decoration: none; color: inherit;">
+                    <div class="option-card">
+                        <div class="option-number">1</div>
+                        <div class="option-title">
+                            <span class="option-icon">📄</span>
+                            Texto das Enquetes
+                        </div>
+                        <div class="option-description">
+                            Acesse o texto completo e oficial das 24 enquetes para votação. Leia os artigos propostos, alterações e inclusões no Regimento Interno e na Convenção do SQA.
+                        </div>
+                        <div class="option-badge">24 Enquetes Completas</div>
+                        <!-- Botão mantido visualmente como div -->
+                        <div class="cta-button" style="text-decoration: none;">Acessar Texto Completo →</div>
                     </div>
-                    <div class="option-description">
-                        Acesse o texto completo e oficial das 24 enquetes para votação. Leia os artigos propostos, alterações e inclusões no Regimento Interno e na Convenção do SQA.
-                    </div>
-                    <div class="option-badge">24 Enquetes Completas</div>
-                    <a href="https://drive.google.com/file/d/12YLrKTTUbAEE3SXYVjAJKeherA2y_YE7/view?usp=sharing" target="_blank" class="cta-button" style="text-decoration: none;">Acessar Texto Completo →</a>
-                </div>
+                </a>
 
                 <!-- Opção 2 -->
-                <div class="option-card">
-                    <div class="option-number">2</div>
-                    <div class="option-title">
-                        <span class="option-icon">💡</span>
-                        Explicação Detalhada
+                <a href="https://drive.google.com/file/d/1eQFrF70Rsihwp5Hg6LKqAmB1tN9Rv7z6/view?usp=sharing" target="_blank" style="text-decoration: none; color: inherit;">
+                    <div class="option-card">
+                        <div class="option-number">2</div>
+                        <div class="option-title">
+                            <span class="option-icon">💡</span>
+                            Explicação Detalhada
+                        </div>
+                        <div class="option-description">
+                            Entenda cada enquete em linguagem simples e acessível. Explicações claras sobre o que está sendo votado, as consequências e os impactos de cada mudança proposta.
+                        </div>
+                        <div class="option-badge">Linguagem Simplificada</div>
+                         <!-- Botão mantido visualmente como div -->
+                        <div class="cta-button" style="text-decoration: none;">Ler Explicações →</div>
                     </div>
-                    <div class="option-description">
-                        Entenda cada enquete em linguagem simples e acessível. Explicações claras sobre o que está sendo votado, as consequências e os impactos de cada mudança proposta.
-                    </div>
-                    <div class="option-badge">Linguagem Simplificada</div>
-                    <a href="https://drive.google.com/file/d/1eQFrF70Rsihwp5Hg6LKqAmB1tN9Rv7z6/view?usp=sharing" target="_blank" class="cta-button" style="text-decoration: none;">Ler Explicações →</a>
-                </div>
+                </a>
 
-                <!-- Opção 3 -->
-                <div class="option-card">
+                <!-- Opção 3 (Não é um link, abre o modal) -->
+                <div class="option-card" onclick="abrirModal()">
                     <div class="option-number">3</div>
                     <div class="option-title">
                         <span class="option-icon">📅</span>
@@ -550,22 +557,25 @@
                         Confira o calendário completo da votação: data de início, data de encerramento, horários e prazos importantes. Não perca o prazo para exercer seu direito de voto!
                     </div>
                     <div class="option-badge">Calendário Oficial</div>
-                    <button class="cta-button" onclick="abrirModal()">Ver Prazos →</button>
+                    <button class="cta-button">Ver Prazos →</button>
                 </div>
 
-                <!-- Opção 4 -->
-                <div class="option-card">
-                    <div class="option-number">4</div>
-                    <div class="option-title">
-                        <span class="option-icon">🗳️</span>
-                        Site de Votação
+                <!-- Opção 4 (Card inteiro clicável) -->
+                <a href="https://sqa.mo.app.br//assembleia/assembleiamo.php?id_assembleia_torre=189" target="_blank" style="text-decoration: none; color: inherit;">
+                    <div class="option-card">
+                        <div class="option-number">4</div>
+                        <div class="option-title">
+                            <span class="option-icon">🗳️</span>
+                            Site de Votação
+                        </div>
+                        <div class="option-description">
+                            Acesso direto ao sistema de votação online. Faça login com suas credenciais e vote nas 24 enquetes de forma rápida, segura e transparente.
+                        </div>
+                        <div class="option-badge">Votação Online</div>
+                        <!-- O botão agora é um div para evitar <a> aninhado, mas mantém o estilo -->
+                        <div class="cta-button" style="text-decoration: none;">Acessar Sistema de Votação →</div>
                     </div>
-                    <div class="option-description">
-                        Acesso direto ao sistema de votação online. Faça login com suas credenciais e vote nas 24 enquetes de forma rápida, segura e transparente.
-                    </div>
-                    <div class="option-badge">Votação Online</div>
-                    <a href="httpsS://sqa.mo.app.br//assembleia/assembleiamo.php?id_assembleia_torre=189" target="_blank" class="cta-button" style="text-decoration: none;">Acessar Sistema de Votação →</a>
-                </div>
+                </a>
             </div>
 
             <div class="intro-box" style="margin-top: 40px;">
