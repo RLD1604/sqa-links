@@ -166,7 +166,29 @@
             font-size: 1.1em;
             font-weight: 500;
         }
+        
+        /* Estilo de Destaque para o primeiro link */
+        .link-item-destaque {
+            background: #fff9e6; /* Fundo amarelo claro */
+            border-color: #e63946; /* Vermelho forte */
+            border-width: 3px;
+            box-shadow: 0 8px 20px rgba(230, 57, 70, 0.25);
+        }
 
+        .link-item-destaque:hover {
+            border-color: #d62828; /* Vermelho um pouco mais escuro no hover */
+            box-shadow: 0 10px 25px rgba(214, 40, 40, 0.3);
+            transform: translateX(10px) scale(1.01); /* Leve zoom no hover */
+        }
+
+        .link-item-destaque::before {
+            color: #e63946; /* Ícone vermelho */
+        }
+        
+        .link-item-destaque:hover::before {
+            color: #d62828; /* Ícone vermelho mais escuro no hover */
+        }
+        /* Fim do estilo de destaque */
 
 
         .footer {
@@ -250,9 +272,10 @@
             <div class="links-section">
                 <h2>🔗 Links Úteis</h2>
 
-                <!-- Link 1: Reforma do Regimento -->
+                <!-- Link 1: Reforma do Regimento (COM DESTAQUE) -->
                 <a href="reforma_regimento.html" style="text-decoration: none; color: inherit;">
-                    <div class="link-item">
+                    <!-- Adicionada a classe 'link-item-destaque' -->
+                    <div class="link-item link-item-destaque"> 
                         <span class="link-text">📋 Reforma do Regimento Interno e Convenção<br>
                         <small style="color: #666; font-size: 0.9em; font-weight: normal; margin-left: 30px; display: block; margin-top: 5px;">
                         Texto das enquetes, explicação detalhada, prazos e link direto para o site de votação
