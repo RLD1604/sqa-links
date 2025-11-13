@@ -189,6 +189,21 @@
             box-shadow: 0 10px 30px rgba(0, 168, 204, 0.2);
             transform: translateY(-5px);
         }
+        
+        /* ESTILO DE DESTAQUE PARA OPÇÃO 4 */
+        .highlight-card .option-card {
+            background: #fff9e6; /* Fundo amarelo claro */
+            border: 5px solid #e63946; /* Borda vermelha grossa */
+            box-shadow: 0 0 15px rgba(230, 57, 70, 0.3); /* Sombra vermelha suave */
+        }
+
+        /* Manter o destaque no hover, mas preservar o transform */
+        .highlight-card .option-card:hover {
+            border-color: #e63946; /* Mantém a borda vermelha */
+            box-shadow: 0 10px 30px rgba(230, 57, 70, 0.4); /* Sombra vermelha mais forte no hover */
+            transform: translateY(-5px); /* Mantém o efeito de levantar */
+        }
+
 
         .option-number {
             display: inline-block;
@@ -214,6 +229,11 @@
             display: flex;
             align-items: center;
             gap: 10px;
+        }
+
+        /* Título do card destacado fica vermelho */
+        .highlight-card .option-title {
+            color: #e63946;
         }
 
         .option-icon {
@@ -258,6 +278,17 @@
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(0, 168, 204, 0.4);
         }
+
+        /* Botão do card destacado */
+        .highlight-card .cta-button {
+            background: linear-gradient(135deg, #e63946 0%, #c91828 100%);
+            box-shadow: 0 4px 15px rgba(230, 57, 70, 0.3);
+        }
+        
+        .highlight-card .cta-button:hover {
+             box-shadow: 0 6px 20px rgba(230, 57, 70, 0.4);
+        }
+
 
         .coming-soon {
             background: #ffc107;
@@ -560,8 +591,8 @@
                     <button class="cta-button">Ver Prazos →</button>
                 </div>
 
-                <!-- Opção 4 (Card inteiro clicável) -->
-                <a href="https://sqa.mo.app.br//assembleia/assembleiamo.php?id_assembleia_torre=189" target="_blank" style="text-decoration: none; color: inherit;">
+                <!-- Opção 4 (Card inteiro clicável com DESTAQUE) -->
+                <a href="https://sqa.mo.app.br//assembleia/assembleiamo.php?id_assembleia_torre=189" target="_blank" style="text-decoration: none; color: inherit;" class="highlight-card">
                     <div class="option-card">
                         <div class="option-number">4</div>
                         <div class="option-title">
