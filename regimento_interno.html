@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regimento Interno - SQA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            position: relative;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #00a8cc;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            width: 100%;
+            max-width: 600px;
+            background: white;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            overflow: hidden;
+            transform: perspective(1000px) rotateY(-2deg);
+            transition: all 0.3s ease;
+        }
+
+        .header-content:hover {
+            transform: perspective(1000px) rotateY(0deg) scale(1.02);
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
+        }
+
+        .header-top {
+            background: #00a8cc;
+            padding: 20px;
+            border-bottom: 3px solid white;
+        }
+
+        .header-title {
+            color: white;
+            font-size: 1.6em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-logo {
+            background: #52b788;
+            padding: 60px 40px;
+            border-top: 3px solid white;
+            border-bottom: 3px solid white;
+        }
+
+        .header-sqa {
+            font-size: 7em;
+            font-weight: 900;
+            color: white;
+            margin: 0;
+            line-height: 1;
+            letter-spacing: 10px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-bottom {
+            background: #e0e0e0;
+            height: 80px;
+        }
+
+        .content {
+            padding: 50px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #00a8cc;
+            text-decoration: none;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            color: #52b788;
+            transform: translateX(-5px);
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .page-title h1 {
+            color: #00a8cc;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+
+        .page-title p {
+            color: #666;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .intro-box {
+            background: linear-gradient(135deg, #00a8cc15 0%, #52b78815 100%);
+            border-left: 5px solid #00a8cc;
+            padding: 25px;
+            margin-bottom: 40px;
+            border-radius: 10px;
+        }
+
+        .intro-box p {
+            color: #333;
+            line-height: 1.8;
+            font-size: 1.05em;
+            margin-bottom: 15px;
+        }
+
+        .intro-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .options-list {
+            display: grid;
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .option-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border: 3px solid #e0e0e0;
+            border-radius: 15px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .option-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 168, 204, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .option-card:hover::before {
+            left: 100%;
+        }
+
+        .option-card:hover {
+            border-color: #00a8cc;
+            box-shadow: 0 10px 30px rgba(0, 168, 204, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .option-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #00a8cc 0%, #52b788 100%);
+            color: white;
+            border-radius: 50%;
+            font-size: 1.5em;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 10px rgba(0, 168, 204, 0.3);
+        }
+
+        .option-title {
+            font-size: 1.6em;
+            color: #00a8cc;
+            margin-bottom: 15px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .option-icon {
+            font-size: 1.2em;
+        }
+
+        .option-description {
+            color: #555;
+            line-height: 1.7;
+            font-size: 1.05em;
+            margin-bottom: 20px;
+        }
+
+        .option-badge {
+            display: inline-block;
+            background: #52b788;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #00a8cc 0%, #52b788 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 168, 204, 0.3);
+            margin-top: 15px;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 168, 204, 0.4);
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 30px;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .footer p {
+            color: #666;
+            margin: 5px 0;
+        }
+
+        .alert-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .alert-box strong {
+            color: #856404;
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .alert-box p {
+            color: #856404;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 25px;
+            }
+
+            .header {
+                height: 350px;
+            }
+
+            .header-content {
+                max-width: 90%;
+            }
+
+            .header-sqa {
+                font-size: 4.5em;
+                letter-spacing: 5px;
+            }
+
+            .page-title h1 {
+                font-size: 1.6em;
+            }
+
+            .option-card {
+                padding: 20px;
+            }
+
+            .option-title {
+                font-size: 1.3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-content">
+                <div class="header-top">
+                    <h1 class="header-title">Superquadra Atlântica</h1>
+                </div>
+                <div class="header-logo">
+                    <div class="header-sqa">SQA</div>
+                </div>
+                <div class="header-bottom"></div>
+            </div>
+        </div>
+
+        <div class="content">
+            <a href="index.html" class="back-link">← Voltar para Links Úteis</a>
+
+            <div class="page-title">
+                <h1>📖 Regimento Interno</h1>
+                <p>Acesse o Regimento Interno vigente do SQA</p>
+            </div>
+
+            <div class="intro-box">
+                <p><strong>Bem-vindo(a) à central de acesso ao Regimento Interno do SQA!</strong></p>
+                <p>O Regimento Interno é o documento que estabelece as regras de funcionamento, direitos e deveres dos moradores, normas de convivência e procedimentos administrativos da nossa comunidade.</p>
+                <p>Aqui você pode consultar o documento vigente:</p>
+            </div>
+
+            <div class="alert-box">
+                <strong>📌 Importante!</strong>
+                <p>Este é o Regimento Interno atualmente em vigor. Caso haja votação de alterações, uma nova versão será disponibilizada após aprovação.</p>
+            </div>
+
+            <div class="options-list">
+                <!-- Opção 1 -->
+                <a href="#" target="_blank" style="text-decoration: none; color: inherit;">
+                    <div class="option-card">
+                        <div class="option-number">1</div>
+                        <div class="option-title">
+                            <span class="option-icon">📄</span>
+                            Regimento Interno Vigente
+                        </div>
+                        <div class="option-description">
+                            Acesse o documento completo do Regimento Interno atualmente em vigor na Superquadra Atlântica. Consulte todas as regras, normas e procedimentos que regem nossa comunidade.
+                        </div>
+                        <div class="option-badge">Documento Oficial</div>
+                        <div class="cta-button" style="text-decoration: none;">Acessar Regimento →</div>
+                    </div>
+                </a>
+
+                <!-- Opção 2 -->
+                <a href="#" target="_blank" style="text-decoration: none; color: inherit;">
+                    <div class="option-card">
+                        <div class="option-number">2</div>
+                        <div class="option-title">
+                            <span class="option-icon">📋</span>
+                            Convenção do Condomínio
+                        </div>
+                        <div class="option-description">
+                            Consulte a Convenção do Condomínio, documento que estabelece as normas fundamentais de organização e funcionamento do SQA, direitos e obrigações dos condôminos.
+                        </div>
+                        <div class="option-badge">Documento Oficial</div>
+                        <div class="cta-button" style="text-decoration: none;">Acessar Convenção →</div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="intro-box" style="margin-top: 40px;">
+                <p><strong>📱 Precisa de ajuda?</strong></p>
+                <p>Se tiver dúvidas sobre o conteúdo do Regimento Interno ou da Convenção, entre em contato com a administração do condomínio.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Superquadra Atlântica - SQA</strong></p>
+            <p>Regimento Interno e Convenção | 2025</p>
+            <p>Conhecimento das regras para uma melhor convivência!</p>
+        </div>
+    </div>
+</body>
+</html>
